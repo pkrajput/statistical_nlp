@@ -1,5 +1,5 @@
-Text Detoxification in Russian
-1. Introduction
+**Text Detoxification in Russian**
+1. Competition link
 
 Ru Detoxification competition: https://codalab.lisn.upsaclay.fr/competitions/532
 
