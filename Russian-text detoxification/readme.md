@@ -6,10 +6,7 @@ Ru Detoxification competition: https://codalab.lisn.upsaclay.fr/competitions/532
 2. Text Detoxification
 
 2.2.1 Introduction
-Global access to the Internet has enabled the spread of information all over the world
-and has given many new possibilities. On the other hand, alongside the advantages, the
-exponential and uncontrolled growth of user-generated content on the Internet has also
-facilitated the spread of toxicity and hate speech. Much work has been done in the
+GThe Internet has facilitated the spread of toxicity and hate speech. Much work has been done in the
 direction of offensive speech detection. However, it has become essential not only to
 detect toxic content but also to combat it in smarter ways. While some social networks
 block sensitive content, another solution can be to detect toxicity in a text which is being
@@ -23,6 +20,7 @@ different groups of researchers, as well as a similar task of transforming text 
 polite form. However, all these works deal only with the English language. As for
 Russian, the methods of text style transfer and text detoxification have not been
 explored before.
+
 2.2.2 Task formulation
 You have a great chance to be the first participant in the competition of automatic
 detoxification of Russian texts to combat offensive language. Such a kind of textual
@@ -74,6 +72,7 @@ and 𝐷
 which can
 is the toxic
 is neutral.
+
 2.2.3 Evaluation metrics
 To perform a comprehensive evaluation of a style transfer model, we need to make sure
 that it (i) changes the text style, (ii) preserves the content, and (iii) yields a grammatical
@@ -83,6 +82,7 @@ three parameters. In our competition we use the following metrics:
 sentence
 2) ChF: character n-gram F score between the rewritten sentence and the manually
 detoxified reference
+
 2.2.4 Methods
 In the context of this assignment, you will solve a style transfer task on the dataset of
 comparative sentences provided by the course team. You will need to train a model and
@@ -104,6 +104,7 @@ Retrieve: This method is targeted at improving the accuracy of style transfer. F
 sentence, we retrieve the most similar non-toxic text from a corpus of non-toxic samples. In this
 case, we get a safe sentence. However, the preservation of the content depends on the corpus
 size and is likely to be very low.
+
 2.2.5 Expected output
 Example of the input and model output are presented below:
 As output we expect a paraphrased (rewritten) toxic sentence in a more neutral
