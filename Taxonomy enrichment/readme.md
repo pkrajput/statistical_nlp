@@ -35,32 +35,10 @@ word could be attached to, e.g. “animal”, “bird”, and so on. Here a word
 one, two or more “ancestors” (hypernym synsets) at the same time.
 
 3 Evaluation metrics
-We expect from participants a ranked list of 10 possible candidates for each new word
-in the test set. We will evaluate the systems using the Mean Average Precision (MAP)
+
+Evaluated using the Mean Average Precision (MAP)
 and Mean Reciprocal Rank (MRR) scores. MAP score pays attention to the whole range
 of possible hypernyms, whereas MRR looks at how close to the top of the list a first
 correct prediction is. In addition to that, the F1 score will be computed to evaluate the
 performance of the top 1 prediction of the methods. MAP will be the official metric to
 rank the submissions.
-In order to be less restrictive during the evaluation, we consider as correct answers not
-only immediate hypernyms of new words, but also hypernyms of these hypernyms.
-Therefore, if a system predicted a hypernym of a correct hypernym, this will also be
-considered a match.
-However, the specificity of the ruWordNet taxonomy and our assumption about
-second-order hypernyms may result in confusion in the evaluation process. Let us
-consider the following examples
-One hypernym may be a “parent” of another hypernym (synset “Moksha” has two
-parents “tributary” and “river”, whereas “river” is the hypernym for “tributary”). While
-computing MAP score, it may not be clear which hypernym group gains the score: the
-one with “river” synset as immediate hypernym or “river” as second-order hypernym.
-Hypernyms may share common parents: “string instrument” and “folk instrument” have
-the hypernym “musical instrument” in common. In this case if “musical instrument”
-appears in the candidate list, MAP score will also be confused. In order to avoid this
-hypernym ambiguity, we split immediate and second-order hypernyms into separate
-groups.Each group corresponds to the connectivity component in the subgraph reconstructed
-from these hypernyms. We see that the first and the second subgraphs possess only
-one connectivity component in comparison to the last subfigure, where immediate
-hypernyms form different hypernym groups.
-Therefore, the list of possible candidates of a given word should contain hypernyms (at
-least one) from each hypernym group.
-
